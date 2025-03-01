@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/maelectricals/static/css/main.83de5fb7.css",
+    "main.js": "/maelectricals/static/js/main.dadefa06.js",
+    "index.html": "/maelectricals/index.html",
+    "main.83de5fb7.css.map": "/maelectricals/static/css/main.83de5fb7.css.map",
+    "main.dadefa06.js.map": "/maelectricals/static/js/main.dadefa06.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.83de5fb7.css",
+    "static/js/main.dadefa06.js"
+  ]
+}
