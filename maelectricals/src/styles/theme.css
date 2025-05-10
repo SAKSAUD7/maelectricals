@@ -1,0 +1,272 @@
+:root {
+  /* Light theme variables */
+  --primary-color: #4dabf7;
+  --primary-hover: #3c8dbc;
+  --accent-color: #ffcc00;
+  --accent-hover: #ffdd33;
+  --text-color: #333;
+  --text-secondary: #666;
+  --text-muted: #888;
+  --text-highlight: #ffcc00;
+  --bg-color: #fff;
+  --bg-secondary: #f8f9fa;
+  --border-color: #ddd;
+  --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --card-hover-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --footer-bg: #1a1a1a;
+  --footer-text: #ccc;
+  --footer-title: #ffcc00;
+  --navbar-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --transition-speed: 0.3s;
+  --container-padding: 20px;
+  --section-spacing: 60px;
+  --card-spacing: 30px;
+  --border-radius: 8px;
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --gradient-bg: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+  --gradient-card: linear-gradient(120deg, #fdfbfb 0%, #f9f7fa 100%);
+  --gradient-cta: linear-gradient(120deg, #4dabf7 0%, #3c8dbc 100%);
+  --gradient-button: linear-gradient(to right, #4dabf7 0%, #3c8dbc 100%);
+  --gradient-yellow: linear-gradient(to right, #ffcc00 0%, #ffdd33 100%);
+  --gradient-hero: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+}
+
+body.dark-theme {
+  /* Dark theme variables */
+  --primary-color: #4dabf7;
+  --primary-hover: #5cb3f9;
+  --accent-color: #ffcc00;
+  --accent-hover: #ffdd33;
+  --text-color: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --text-muted: #888;
+  --text-highlight: #ffcc00;
+  --bg-color: #121212;
+  --bg-secondary: #1e1e1e;
+  --border-color: #333;
+  --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  --card-hover-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  --footer-bg: #0a0a0a;
+  --footer-text: #999;
+  --footer-title: #ffcc00;
+  --navbar-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  --gradient-bg: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+  --gradient-card: linear-gradient(120deg, #1a1a1a 0%, #242424 100%);
+  --gradient-cta: linear-gradient(120deg, #1e293b 0%, #0f172a 100%);
+  --gradient-button: linear-gradient(to right, #4dabf7 0%, #5cb3f9 100%);
+  --gradient-yellow: linear-gradient(to right, #ffcc00 0%, #ffdd33 100%);
+  --gradient-hero: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+}
+
+body {
+  background: var(--gradient-bg);
+  color: var(--text-color);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-attachment: fixed;
+}
+
+/* Container for consistent padding */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  box-sizing: border-box;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  transition: background-color var(--transition-speed);
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.dark-theme .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* WhatsApp CTA */
+.whatsapp-cta {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: transform 0.3s ease;
+  border: none;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.whatsapp-cta:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-cta svg {
+  width: 35px;
+  height: 35px;
+  color: white;
+}
+
+.whatsapp-cta {
+  animation: none;
+}
+
+/* Card styling with gradients */
+.card-gradient {
+  background: var(--gradient-card);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  border: 1px solid var(--border-color);
+}
+
+.card-gradient:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-hover-shadow);
+}
+
+/* Button with gradient */
+.btn-gradient {
+  background: var(--gradient-button);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(77, 171, 247, 0.4);
+}
+
+.btn-yellow {
+  background: var(--gradient-yellow);
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.btn-yellow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 204, 0, 0.4);
+}
+
+.highlight-text {
+  color: var(--text-highlight);
+  font-weight: bold;
+}
+
+.section-title-yellow {
+  color: var(--accent-color);
+  position: relative;
+  display: inline-block;
+}
+
+.section-title-yellow::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-color);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  :root {
+    --container-padding: 15px;
+    --section-spacing: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 15px;
+    --section-spacing: 40px;
+    --card-spacing: 20px;
+  }
+  
+  .whatsapp-cta {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .whatsapp-cta:hover {
+    width: 140px;
+  }
+  
+  .whatsapp-cta svg {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .whatsapp-cta::before {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-padding: 10px;
+    --section-spacing: 30px;
+    --card-spacing: 15px;
+  }
+  
+  .whatsapp-cta:hover {
+    width: 130px;
+  }
+  
+  .whatsapp-cta::before {
+    font-size: 12px;
+  }
+} 
