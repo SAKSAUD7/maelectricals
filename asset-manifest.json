@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/maelectricals/static/css/main.83de5fb7.css",
-    "main.js": "/maelectricals/static/js/main.926887ee.js",
+    "main.css": "/maelectricals/static/css/main.037d505e.css",
+    "main.js": "/maelectricals/static/js/main.cc4df3e6.js",
+    "static/js/453.a278cda0.chunk.js": "/maelectricals/static/js/453.a278cda0.chunk.js",
     "index.html": "/maelectricals/index.html",
-    "main.83de5fb7.css.map": "/maelectricals/static/css/main.83de5fb7.css.map",
-    "main.926887ee.js.map": "/maelectricals/static/js/main.926887ee.js.map"
+    "main.037d505e.css.map": "/maelectricals/static/css/main.037d505e.css.map",
+    "main.cc4df3e6.js.map": "/maelectricals/static/js/main.cc4df3e6.js.map",
+    "453.a278cda0.chunk.js.map": "/maelectricals/static/js/453.a278cda0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.83de5fb7.css",
-    "static/js/main.926887ee.js"
+    "static/css/main.037d505e.css",
+    "static/js/main.cc4df3e6.js"
   ]
 }
